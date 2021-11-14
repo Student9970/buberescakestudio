@@ -1,0 +1,261 @@
+:root{
+    --white: white;
+    --offwhite: rgb(228, 228, 228);
+    --darkest: #000;
+}
+
+body{
+    background-color: var(--darkest);
+}
+
+.mynav{
+    background-color: var(--darkest);
+}
+
+.mylogo{
+    height: 100%;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.mynav .container-fluid .navli ul li a{
+    color: var(--offwhite);
+}
+
+.mynav .container-fluid .navli ul li a:hover{
+    color: var(--offwhite);
+}
+
+.mylogo .navbar-brand{
+    color: var(--white);}
+
+.mylogo .navbar-brand:hover{
+    color: var(--white);
+}
+
+.heading{
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: var(--white);
+}
+
+.lined{
+    background-color: white;
+    height: 0.5vh;
+    width: 5%;
+    border-radius: 100px;
+}
+
+.category{
+    /* border: solid red 1px; */
+    height: 260px;
+}
+
+.box{
+    height: 250px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: rgb(0, 16, 51);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.img{
+    height: 85%;
+}
+
+.image{
+    margin-top: 3%;
+    height: 190px;
+    width: 190px;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.box .img img{
+    width:200%;
+    height:200%;
+    object-fit: cover;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.box:hover{
+    box-shadow: 1px 1px 5px rgba(255, 105, 180, 0.5);
+    transition: 0.3s;
+    height: 255px;
+    width: 205px;
+}
+
+.box:hover .img{
+    height: 100%;
+    transition: 0.3s;
+}
+
+.box:hover .image{
+    transform: translateY(-1%);
+    height: 90%;
+    transition: 0.3s;
+}
+
+.box:hover .hov_image{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.box:hover .name{
+    height: 0%;
+    opacity: 0%;
+    transition: 0.3s;
+}
+
+.visit{
+    height: 70vh;
+    width: 100%;
+}
+
+.sec{
+    height: 300px;
+    min-width: 700px;
+    width: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.map{
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.embed{
+    height: 90%;
+    width: 90%;
+    border: 0.1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.embed iframe{
+    transform: scale(1.1);
+}
+
+.address{
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+}
+
+.mybtn{
+    border-radius: 50px;
+    width: 150px;
+    background: linear-gradient(to bottom,  rgb(255, 153, 0), rgb(165, 116, 42));
+    border: none;
+    color: #000;
+}
+
+.mybtn:hover{
+    color: #000;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.myfooter{
+    background-color: rgba(0, 0, 0, 0.106);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.myfooter .container{
+    height: 50vh;
+}
+
+.feedback{
+    position: relative;
+    height: 50vh;
+}
+
+.your-feedback{
+    /* position: absolute; */
+    height:10%;
+    width: 200px;
+    top: 100px;
+    transform: rotate(-90deg);
+}
+
+.feedback .myform{
+    margin-left: -50px;
+}
+
+.feedback .myform input{
+    margin: 10px 0 10px 0;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+}
+
+.mybutton{
+    font-weight: bold;
+    background-color: rgba(183, 43, 226, 0.5);
+    border: none;
+}
+
+.name-tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.names{
+    background-color: rgba(183, 43, 226, 0.5);
+    text-align: center;
+    padding: 50px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+}
+
+.connect .social-links{
+    margin-right: -50px;
+    flex-direction: column;
+}
+
+.connect-with-us{
+    margin-right: -80px;
+    height:10%;
+    width: 200px;
+    top: 100px;
+    transform: rotate(90deg);    
+}
+
+.social-links a{
+    text-decoration: none;
+    color: black;
+    margin: 10px 0 10px 0;
+}

@@ -1,0 +1,71 @@
+:root{
+
+    --offwhite: #fdfcee;
+    --offwhitel: #fdfceede;
+
+    --lb: #8ECAE6;
+    --lbl: #8ecae6de;
+    
+    --db: #219EBC;
+    --dbl: #219EBCde;
+    
+    --bl: #023047;
+    --bll: #023047de;
+    
+    --yo: #FFB703;
+    --yol: #FFB703de;
+    
+    --or: #FB8500;
+    --orl: #FB8500de;
+
+    --black: #000;
+}
+
+.shopcakes{
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.thebox{
+    height: 300px;
+    width: 90vw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    height: 90%;
+    width: 90%;
+}
+
+.itemimage{
+    height: 90%;
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: linear-gradient(var(--yol), var(--yo));
+}
+
+.itemimage img{
+    width: 110%;
+    object-fit: contain;
+}
+
+.itemdetails{
+    color: var(--black);
+}
+
+.submitbtn{
+    border-radius: 5px;
+    background: linear-gradient(var(--or),var(--yo));
+    border: none;
+}
