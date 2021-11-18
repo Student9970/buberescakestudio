@@ -1,15 +1,15 @@
 :root{
-    --white: white;
-    --offwhite: rgba(255, 255, 255, 0.8);
-    --darkest: #000;
+    --myback: rgba(0, 0, 0, 0.8);
+    --white: black;
+    --black: white;
+    --blackl: rgba(255, 255, 255, 0.5);
+    --branding: rgba(183, 43, 226);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --footer: rgba(209, 209, 209, 0.5);
 }
 
 body{
-    background-color: var(--darkest);
-}
-
-.mynav{
-    background-color: var(--darkest);
+    background-color: var(--myback);
 }
 
 .mylogo{
@@ -21,30 +21,39 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 
+.mylogo .navbar-brand{
+    color: var(--branding);
+}
+
+.mylogo .navbar-brand:hover{
+    color: var(--branding);
+}
+
 .mynav .container-fluid .navli ul li a{
-    color: var(--offwhite);
+    color: var(--blackl);
 }
 
 .mynav .container-fluid .navli ul li a:hover{
-    color: var(--offwhite);
+    color: var(--blackl);
 }
 
-.mylogo .navbar-brand{
-    color: var(--white);}
+.activelink{
+    color: var(--black) !important;
+}
 
-.mylogo .navbar-brand:hover{
-    color: var(--white);
+.navbar-toggler-icon{
+    background-color: var(--footer);
 }
 
 .heading{
     flex-direction: column;
     margin-top: 2%;
     margin-bottom: 1%;
-    color: var(--white);
+    color: var(--black);
 }
 
 .lined{
-    background-color: white;
+    background-color: var(--black);
     height: 0.5vh;
     width: 5%;
     border-radius: 100px;
@@ -59,15 +68,17 @@ body{
     height: 250px;
     width: 200px;
     border-radius: 15px;
-    background-color: #121212;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 .img{
     height: 85%;
+    width: 95%;
 }
 
 .image{
@@ -76,7 +87,6 @@ body{
     width: 190px;
     border-radius: 15px;
     overflow: hidden;
-
 }
 
 .box .img img{
@@ -88,11 +98,11 @@ body{
 .name{
     font-size: 20px;
     font-weight: bold;
-    color: var(--offwhite);
+    color: var(--black);
 }
 
 .box:hover{
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 3px var(--shadow);
     transition: 0.3s;
     height: 255px;
     width: 205px;
@@ -122,17 +132,22 @@ body{
     transition: 0.3s;
 }
 
+.cat-links{
+    text-decoration: none;
+}
+
 .visit{
     height: 70vh;
     width: 100%;
 }
 
 .sec{
-    height: 300px;
-    min-width: 700px;
-    width: 700px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    height: 50vh;
+    min-width: 80vw;
+    width: 80vw;
     border-radius: 30px;
+    color: var(--black);
+    background-color: var(--white);
 }
 
 .map{
@@ -148,7 +163,7 @@ body{
 .embed{
     height: 90%;
     width: 90%;
-    border: 0.1px solid rgba(0, 0, 0, 0.3);
+    /* border: 0.1px solid rgba(0, 0, 0, 0.3); */
     border-radius: 30px;
     overflow: hidden;
     display: flex;
@@ -166,23 +181,26 @@ body{
     flex-direction: column;
 }
 
+.address p{
+    color: var(--blackl);
+}
+
 .mybtn{
     border-radius: 50px;
     width: 150px;
-    background: linear-gradient(to bottom,  rgb(255, 153, 0), rgb(165, 116, 42));
+    background: linear-gradient(to bottom,  var(--branding), rgb(69, 6, 88));
     border: none;
-    color: #000;
+    color: var(--black);
 }
 
 .mybtn:hover{
-    color: #000;
+    color: var(--black);
     font-weight: bold;
-    transition: 0.5s;
 }
 
 .myfooter{
-    background-color: rgba(0, 0, 0, 0.106);
-    height: 60vh;
+    background-color: var(--footer);
+    /* height: 60vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,7 +208,7 @@ body{
 }
 
 .myfooter .container{
-    height: 50vh;
+    height: 90%;
 }
 
 .feedback{
@@ -204,6 +222,7 @@ body{
     width: 200px;
     top: 100px;
     transform: rotate(-90deg);
+    color: var(--white);
 }
 
 .feedback .myform{
@@ -215,11 +234,23 @@ body{
     border-radius: 50px;
     border: none;
     padding: 10px 20px 10px 20px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.feedback .myform input:hover{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+}
+
+.feedback .myform input:focus{
+    outline: none;
 }
 
 .mybutton{
     font-weight: bold;
-    background-color: rgba(183, 43, 226, 0.5);
+    background-color: var(--branding) !important;
     border: none;
 }
 
@@ -230,7 +261,8 @@ body{
 }
 
 .names{
-    background-color: rgba(183, 43, 226, 0.5);
+    background-color: var(--branding);
+    color: var(--black);
     text-align: center;
     padding: 50px;
     height: 200px;
@@ -255,6 +287,32 @@ body{
 
 .social-links a{
     text-decoration: none;
-    color: black;
+    color: var(--blackl);
+    background-color: var(--white);
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    width: 200px;
+    justify-content: end;
+    display: flex;
     margin: 10px 0 10px 0;
+}
+
+.social-links a:hover{
+    background-color: var(--black);
+}
+
+.insta:hover{
+    color: rgb(255, 0, 191);
+}
+
+.twitter:hover{
+    color: rgb(29, 161, 242);
+}
+
+.fb:hover{
+    color: rgb(66, 103, 178);
+}
+
+.youtube:hover{
+    color: red;
 }

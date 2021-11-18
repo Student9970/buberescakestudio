@@ -52,11 +52,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 .img{
     height: 85%;
+    width: 95%;
 }
 
 .image{
@@ -110,15 +112,19 @@ body{
     transition: 0.3s;
 }
 
+.cat-links{
+    text-decoration: none;
+}
+
 .visit{
     height: 70vh;
     width: 100%;
 }
 
 .sec{
-    height: 300px;
-    min-width: 700px;
-    width: 700px;
+    height: 50vh;
+    min-width: 80vw;
+    width: 80vw;
     border-radius: 30px;
     color: var(--black);
     background-color: var(--white);
@@ -173,7 +179,7 @@ body{
 
 .myfooter{
     background-color: var(--footer);
-    height: 60vh;
+    /* height: 60vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,7 +187,7 @@ body{
 }
 
 .myfooter .container{
-    height: 50vh;
+    height: 90%;
 }
 
 .feedback{
@@ -208,6 +214,10 @@ body{
     border: none;
     padding: 10px 20px 10px 20px;
     background-color: var(--white);
+}
+
+.feedback .myform input:focus{
+    outline: none;
 }
 
 .mybutton{
@@ -257,4 +267,20 @@ body{
     justify-content: end;
     display: flex;
     margin: 10px 0 10px 0;
+}
+
+.insta:hover{
+    color: rgb(255, 0, 191);
+}
+
+.twitter:hover{
+    color: rgb(29, 161, 242);
+}
+
+.fb:hover{
+    color: rgb(66, 103, 178);
+}
+
+.youtube:hover{
+    color: red;
 }
