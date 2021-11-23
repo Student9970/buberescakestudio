@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+}
+
 :root{
     --myback: rgba(0, 0, 0, 0.8);
     --white: black;
@@ -35,7 +39,7 @@ body{
 
 .mynav .container-fluid .navli ul li a:hover{
     color: var(--blackl);
-}
+} 
 
 .activelink{
     color: var(--black) !important;

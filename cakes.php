@@ -14,49 +14,48 @@
     <!-- Bootstrap CSS -->
     <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- <link href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen"> -->
+    <link id="maincss" href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen">
 
-    <link href="./CSS/darkStyle.css" rel="stylesheet" type="text/css" media="screen">
-
-    <!-- <link rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css"> -->
-
-    <link rel="stylesheet" href="./CSS/darkproducts.css" media="screen" type="text/css">
+    <link id="products" rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css">
 
     <title>Bubere's Cake Studio / Cakes</title>
   </head>
   <body>
 
-    <!-- ============== NAVBAR ============== -->
+  <script src="./JS/app.js"></script>
 
-    <nav class="mynav navbar navbar-expand-lg navbar-light"> 
-        <div class="container-fluid">
-          <div class="mylogo">
-          <a class="navbar-brand" href="index.php">Bubere's Cake Studio</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link activelink" href="index.php">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.php">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Light Mode</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<!-- ============== NAVBAR ============== -->
+
+<nav class="mynav navbar navbar-expand-lg navbar-light"> 
+    <div class="container-fluid">
+      <div class="mylogo">
+      <a class="navbar-brand" href="#">Bubere's Cake Studio</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link activelink" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" onclick="modeChangep();" id = "modeChanger">Dark Mode</a>
+          </li>
+        </ul>
+        <button>Log In</button>
+      </div>
+    </div>
+  </nav>
 
       <!-- SHOP CAKES -->
 

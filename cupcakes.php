@@ -14,58 +14,57 @@
     <!-- Bootstrap CSS -->
     <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- <link href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen"> -->
+    <link id="maincss" href="./CSS/Style.css" rel="stylesheet" type="text/css" media="screen">
 
-    <link href="./CSS/darkStyle.css" rel="stylesheet" type="text/css" media="screen">
+    <link id="products" rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css">
 
-    <!-- <link rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css"> -->
-
-    <link rel="stylesheet" href="./CSS/darkproducts.css" media="screen" type="text/css">
-
-    <title>Bubere's Cake Studio / Pastries</title>
+    <title>Bubere's Cake Studio / Cup Cakes</title>
   </head>
   <body>
 
-    <!-- ============== NAVBAR ============== -->
+  <script src="./JS/app.js"></script>
 
-    <nav class="mynav navbar navbar-expand-lg navbar-light"> 
-        <div class="container-fluid">
-          <div class="mylogo">
-          <a class="navbar-brand" href="index.php">Bubere's Cake Studio</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link activelink" href="index.php">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.php">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Light Mode</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<!-- ============== NAVBAR ============== -->
 
-      <!-- SHOP PASTRIES -->
+<nav class="mynav navbar navbar-expand-lg navbar-light"> 
+    <div class="container-fluid">
+      <div class="mylogo">
+      <a class="navbar-brand" href="#">Bubere's Cake Studio</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link activelink" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" onclick="modeChangep();" id = "modeChanger">Dark Mode</a>
+          </li>
+        </ul>
+        <button>Log In</button>
+      </div>
+    </div>
+  </nav>
+
+      <!-- SHOP CUP CAKES -->
 
       <div class="shopcakes container d-flex align-items-center justify-content-center">
-        <h3>Shop Pastries</h3>
+        <h3>Shop Cup Cakes</h3>
         <div class="lined"></div>
       </div>
 
-      <!-- Pastries -->
+      <!-- Cakes -->
 
       <div class="container my-5">
 
@@ -78,118 +77,14 @@
               <div class="item d-flex justify-content-center align-items-center row">
 
                 <div class="itemimage col-6">
-                  <img src="./images/Pastries/butter_scotch_pastry.jpg">
+                  <img src="./images/Muffins/almond_muffin.jpg">
                 </div>
 
                 <div class="col-2"></div>
 
                 <div class="itemdetails col-4">
-                  <h3>Butter Scotch Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 35</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/cheese_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Cheese Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 40</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/choco_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Chocolate Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 45</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/mango_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Mango Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 55</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/strawberry_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Mango Strawberry Pastry</h3>
-                  <p>1 Piece</p>
+                  <h3>Almond Muffin</h3>
+                  <p>3 Pieces</p>
                   <h4>&#x20B9; 60</h4>
                   <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
                 </div>
@@ -207,16 +102,66 @@
               <div class="item d-flex justify-content-center align-items-center row">
 
                 <div class="itemimage col-6">
-                  <img src="./images/Pastries/vanilla_pastry.jpg">
+                  <img src="./images/Muffins/choco_muffins.jpg">
                 </div>
 
                 <div class="col-2"></div>
 
                 <div class="itemdetails col-4">
-                  <h3>Vanilla Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 40</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
+                    <h3>Chocolate Muffin</h3>
+                    <p>6 Pieces</p>
+                    <h4>&#x20B9; 30</h4>
+                    <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
+                  </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <div class="thebox container">
+
+              <div class="item d-flex justify-content-center align-items-center row">
+
+                <div class="itemimage col-6">
+                  <img src="./images/Muffins/mawa_muffin.jpg">
+                </div>
+
+                <div class="col-2"></div>
+
+                <div class="itemdetails col-4">
+                    <h3>Mawa Muffin</h3>
+                    <p>6 Pieces</p>
+                    <h4>&#x20B9; 30</h4>
+                    <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
+                  </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <div class="thebox container">
+
+              <div class="item d-flex justify-content-center align-items-center row">
+
+                <div class="itemimage col-6">
+                  <img src="./images/Muffins/strawberry_muffins.jpg">
+                </div>
+
+                <div class="col-2"></div>
+
+                <div class="itemdetails col-4">
+                    <h3>Strawberry Muffin</h3>
+                    <p>6 pieces</p>
+                    <h4>&#x20B9; 60</h4>
+                    <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
                 </div>
 
               </div>

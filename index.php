@@ -14,13 +14,13 @@
     <!-- Bootstrap CSS -->
     <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen">
-
-    <!-- <link href="./CSS/darkStyle.css" rel="stylesheet" type="text/css" media="screen"> -->
+    <link id="maincss" href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen">
 
     <title>Bubere's Cake Studio</title>
   </head>
   <body>
+    
+    <script src="./JS/app.js"></script>
 
     <!-- ============== NAVBAR ============== -->
 
@@ -38,18 +38,19 @@
                 <a class="nav-link activelink" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="index.php#products">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="contact.php">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="about.php">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Light Mode</a>
+                <a class="nav-link" aria-current="page" href="#" onclick="modeChange();" id = "modeChanger">Dark Mode</a>
               </li>
             </ul>
+            <button>Log In</button>
           </div>
         </div>
       </nav>
@@ -80,7 +81,7 @@
 
       <!-- Featured Categories -->
 
-      <div class="heading container d-flex align-items-center justify-content-center">
+      <div class="heading container d-flex align-items-center justify-content-center" id="products">
         <h3>Featured Categories</h3>
         <div class="lined"></div>
       </div>
@@ -92,7 +93,7 @@
           <!-- 1 -->
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
           
-          <a href="cakes.html" class="cat-links">
+          <a href="cakes.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -109,6 +110,7 @@
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
+            <a href="pastries.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -117,13 +119,14 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Pastries</div>
             </div>
+            </a>
 
           </div>
           
           <!-- 3 -->
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
-            
+            <a href="donuts.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -132,6 +135,7 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Donuts</div>
             </div>
+            </a>
 
           </div>
 
@@ -139,6 +143,7 @@
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
+            <a href="desserts.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -147,6 +152,7 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Desserts</div>
             </div>
+            </a>
 
           </div>
 
@@ -157,6 +163,7 @@
           <!-- 1 -->
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
+            <a href="cookies.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -165,6 +172,7 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Cookies</div>
             </div>
+            </a>
 
           </div>
 
@@ -172,6 +180,7 @@
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
+            <a href="wafers.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -180,6 +189,7 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Wafers</div>
             </div>
+            </a>
 
           </div>
           
@@ -187,6 +197,7 @@
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
+            <a href="cupcakes.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -195,6 +206,7 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Cup Cakes</div>
             </div>
+            </a>
 
           </div>
 
@@ -202,6 +214,7 @@
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
+            <a href="#" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">
@@ -210,6 +223,7 @@
               </div>
               <div class="name d-flex justify-content-center align-items-center">Custom Cake</div>
             </div>
+            </a>
 
           </div>
 

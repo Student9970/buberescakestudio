@@ -14,58 +14,57 @@
     <!-- Bootstrap CSS -->
     <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- <link href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen"> -->
+    <link id="maincss" href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen">
 
-    <link href="./CSS/darkStyle.css" rel="stylesheet" type="text/css" media="screen">
+    <link id="products" rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css">
 
-    <!-- <link rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css"> -->
-
-    <link rel="stylesheet" href="./CSS/darkproducts.css" media="screen" type="text/css">
-
-    <title>Bubere's Cake Studio / Donuts</title>
+    <title>Bubere's Cake Studio / Wafers</title>
   </head>
   <body>
 
-    <!-- ============== NAVBAR ============== -->
+  <script src="./JS/app.js"></script>
 
-    <nav class="mynav navbar navbar-expand-lg navbar-light"> 
-        <div class="container-fluid">
-          <div class="mylogo">
-          <a class="navbar-brand" href="index.php">Bubere's Cake Studio</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link activelink" href="index.php">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.php">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Light Mode</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<!-- ============== NAVBAR ============== -->
 
-      <!-- SHOP DONUTS -->
+<nav class="mynav navbar navbar-expand-lg navbar-light"> 
+    <div class="container-fluid">
+      <div class="mylogo">
+      <a class="navbar-brand" href="#">Bubere's Cake Studio</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link activelink" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" onclick="modeChangep();" id = "modeChanger">Dark Mode</a>
+          </li>
+        </ul>
+        <button>Log In</button>
+      </div>
+    </div>
+  </nav>
+
+      <!-- SHOP WAFERS -->
 
       <div class="shopcakes container d-flex align-items-center justify-content-center">
-        <h3>Shop Donuts</h3>
+        <h3>Shop Wafers</h3>
         <div class="lined"></div>
       </div>
 
-      <!-- Donuts -->
+      <!-- Wafers -->
 
       <div class="container my-5">
 
@@ -78,15 +77,15 @@
               <div class="item d-flex justify-content-center align-items-center row">
 
                 <div class="itemimage col-6">
-                  <img src="./images/Donuts/choco_donut.jpg">
+                  <img src="./images/Wafers/Banana_chips.jpg">
                 </div>
 
                 <div class="col-2"></div>
 
                 <div class="itemdetails col-4">
-                  <h3>Chocolate Donuts</h3>
-                  <p>3 Pieces</p>
-                  <h4>&#x20B9; 100</h4>
+                  <h3>Banana Chips</h3>
+                  <p>500 g</p>
+                  <h4>&#x20B9; 50</h4>
                   <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
                 </div>
 
@@ -103,15 +102,40 @@
               <div class="item d-flex justify-content-center align-items-center row">
 
                 <div class="itemimage col-6">
-                  <img src="./images/Donuts/cinnamon_sugar.jpg">
+                  <img src="./images/Wafers/nachos.jpg">
                 </div>
 
                 <div class="col-2"></div>
 
                 <div class="itemdetails col-4">
-                    <h3>Cinnamon Sugar Donuts</h3>
-                    <p>3 Pieces</p>
-                    <h4>&#x20B9; 100</h4>
+                    <h3>Nachos</h3>
+                    <p>500 g</p>
+                    <h4>&#x20B9; 70</h4>
+                    <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <div class="thebox container">
+
+              <div class="item d-flex justify-content-center align-items-center row">
+
+                <div class="itemimage col-6">
+                  <img src="./images/Wafers/pepper_banana_chips.jpg">
+                </div>
+
+                <div class="col-2"></div>
+
+                <div class="itemdetails col-4">
+                    <h3>Red Chilli Banana Chips</h3>
+                    <p>500 g</p>
+                    <h4>&#x20B9; 80</h4>
                     <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
                   </div>
 
@@ -128,15 +152,15 @@
               <div class="item d-flex justify-content-center align-items-center row">
 
                 <div class="itemimage col-6">
-                  <img src="./images/Donuts/strawberry_donut.jpg">
+                  <img src="./images/Wafers/salted_chips.jpg">
                 </div>
 
                 <div class="col-2"></div>
 
                 <div class="itemdetails col-4">
-                    <h3>Sweet Strawberry Donut</h3>
-                    <p>3 Pieces</p>
-                    <h4>&#x20B9; 100</h4>
+                    <h3>Salted Potato Chips</h3>
+                    <p>500 g</p>
+                    <h4>&#x20B9; 30</h4>
                     <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
                   </div>
 
