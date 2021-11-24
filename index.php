@@ -27,7 +27,7 @@
     <nav class="mynav navbar navbar-expand-lg navbar-light"> 
         <div class="container-fluid">
           <div class="mylogo">
-          <a class="navbar-brand" href="#">Bubere's Cake Studio</a>
+          <a class="navbar-brand" href="index.php">Bubere's Cake Studio</a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
           <div class="navli collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link activelink" aria-current="page" href="#">Home</a>
+                <a class="nav-link activelink" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.php#products">Products</a>
@@ -50,7 +50,9 @@
                 <a class="nav-link" aria-current="page" href="#" onclick="modeChange();" id = "modeChanger">Dark Mode</a>
               </li>
             </ul>
-            <button>Log In</button>
+            <form action="login.php">
+              <button>Log In</button>
+            </form>
           </div>
         </div>
       </nav>
@@ -63,6 +65,9 @@
             <img src="./images/Half Chocolate Cake.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
+            <div class="mangocake">
+              <h1>Unwrap Happiness for <br> Every Moment</h1>
+            </div>
             <img src="./images/Mango Cake.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">

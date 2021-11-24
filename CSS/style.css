@@ -48,6 +48,17 @@ body{
     height: 260px;
 }
 
+.carousel{
+    position: relative;
+}
+
+.mangocake{
+    height: 40%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position:absolute;
+}
+
 .box{
     height: 250px;
     width: 200px;
