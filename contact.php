@@ -20,7 +20,11 @@
 
     <title>Bubere's Cake Studio / Contact</title>
   </head>
-  <body>
+  <body onload="anima();">
+
+<?php
+include 'loading_animation.php';
+?>
 
   <script src="./JS/app.js"></script>
 
@@ -52,14 +56,20 @@
                 <a class="nav-link" aria-current="page" href="#" onclick="modeChangec();" id = "modeChanger">Dark Mode</a>
               </li>
             </ul>
-            <form action="login.php">
-              <button>Log In</button>
+            
+            <form id="lform" class="lform" action="login.php">
+              <button id="ltbn" style="border:none; margin-bottom: 5px; background: #BB001B;" type="submit" class="btn btn-success lbtn">Log In</button>
             </form>
+            
+            <form id="sform" class="sform" action="SignUp.php">
+              <button id="stbn" style="border:none; background: #4285F4; margin-bottom: 5px; color:#fff;" type="submit" class="btn btn-succes mx-md-2 sbtn">Sign Up</button>
+            </form>
+
           </div>
         </div>
       </nav>
 
-      <!-- ABOUT US -->
+      <!-- CONTACT FORM -->
 
       <section id="contact">
         <div class="contact-box">

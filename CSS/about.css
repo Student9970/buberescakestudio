@@ -1,5 +1,5 @@
-:root{
-    --myback: rgba(0, 0, 0, 0.089);
+:root {
+    --myback: rgba(0, 0, 0, 0.1);
     --white: white;
     --black: black;
     --blackl: rgba(0, 0, 0, 0.5);
@@ -8,22 +8,22 @@
     --footer: rgb(209, 209, 209);
 }
 
-body{
+body {
     background-color: var(--myback);
 }
 
-.pg1{
+.pg1 {
     position: relative;
     height: 100vh;
 }
 
-.coloured{
+.coloured {
     height: 100%;
     width: 30%;
     background-color: var(--branding);
 }
 
-.main{
+.main {
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -33,7 +33,7 @@ body{
     align-items: center;
 }
 
-.maincontainer{
+.maincontainer {
     border-radius: 50px;
     height: 90%;
     background-color: var(--white);
@@ -42,7 +42,7 @@ body{
     justify-content: center;
 }
 
-.txtarea{
+.txtarea {
     width: 100%;
     display: flex;
     align-items: center;
@@ -50,15 +50,15 @@ body{
     flex-direction: column;
 }
 
-.txtarea h2{
+.txtarea h2 {
     color: var(--black);
 }
 
-.txtarea p{
+.txtarea p {
     color: var(--blackl);
 }
 
-.bakery img{
+.bakery img {
     height: auto;
     width: 100%;
 }

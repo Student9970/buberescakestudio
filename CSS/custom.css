@@ -1,0 +1,45 @@
+.page {
+    background: linear-gradient(rgb(212, 54, 186), rgb(154, 54, 212));
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+}
+
+.formbody {
+    height: 60vh;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#cakelogo {
+    height: 30%;
+    width: auto;
+    border-radius: 50%;
+}
+
+.select {
+    width: 180px;
+}
+
+.select label {
+    width: 90%;
+}
+
+.labels {
+    border: none;
+    border-radius: 5px;
+}
+
+.mysubbtn {
+    width: 180px;
+}
+
+.frm {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.imgsection {
+    background: linear-gradient(to bottom, rgb(128, 16, 180), rgb(206, 28, 161));
+    backdrop-filter: blur(25px);
+}

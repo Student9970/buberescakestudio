@@ -1,8 +1,8 @@
-*{
+* {
     scroll-behavior: smooth;
 }
 
-:root{
+:root {
     --myback: rgba(0, 0, 0, 0.8);
     --white: black;
     --black: white;
@@ -12,11 +12,11 @@
     --footer: rgba(209, 209, 209, 0.5);
 }
 
-body{
+body {
     background-color: var(--myback);
 }
 
-.mylogo{
+.mylogo {
     height: 100%;
     left: 50px;
     display: flex;
@@ -25,50 +25,62 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 
-.mylogo .navbar-brand{
+.mylogo .navbar-brand {
     color: var(--branding);
 }
 
-.mylogo .navbar-brand:hover{
+.mylogo .navbar-brand:hover {
     color: var(--branding);
 }
 
-.mynav .container-fluid .navli ul li a{
+.mynav .container-fluid .navli ul li a {
     color: var(--blackl);
 }
 
-.mynav .container-fluid .navli ul li a:hover{
+.mynav .container-fluid .navli ul li a:hover {
     color: var(--blackl);
-} 
+}
 
-.activelink{
+.activelink {
     color: var(--black) !important;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     background-color: var(--footer);
 }
 
-.heading{
+.heading {
     flex-direction: column;
     margin-top: 2%;
     margin-bottom: 1%;
     color: var(--black);
 }
 
-.lined{
+.mangocake {
+    flex-direction: column;
+    height: 40%;
+    /* width: 25%; */
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.mangocake h1 {
+    color: white;
+}
+
+.lined {
     background-color: var(--black);
     height: 0.5vh;
     width: 5%;
     border-radius: 100px;
 }
 
-.category{
+.category {
     /* border: solid red 1px; */
     height: 260px;
 }
 
-.box{
+.box {
     height: 250px;
     width: 200px;
     border-radius: 15px;
@@ -80,12 +92,12 @@ body{
     overflow: hidden;
 }
 
-.img{
+.img {
     height: 85%;
     width: 95%;
 }
 
-.image{
+.image {
     margin-top: 3%;
     height: 190px;
     width: 190px;
@@ -93,59 +105,59 @@ body{
     overflow: hidden;
 }
 
-.box .img img{
-    width:200%;
-    height:200%;
+.box .img img {
+    width: 200%;
+    height: 200%;
     object-fit: cover;
 }
 
-.name{
+.name {
     font-size: 20px;
     font-weight: bold;
     color: var(--black);
 }
 
-.box:hover{
+.box:hover {
     box-shadow: 0px 0px 3px var(--shadow);
     transition: 0.3s;
     height: 255px;
     width: 205px;
 }
 
-.box:hover .img{
+.box:hover .img {
     height: 100%;
     transition: 0.3s;
 }
 
-.box:hover .image{
+.box:hover .image {
     transform: translateY(-1%);
     height: 90%;
     transition: 0.3s;
 }
 
-.box:hover .hov_image{
+.box:hover .hov_image {
     height: 100%;
     width: 100%;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.box:hover .name{
+.box:hover .name {
     height: 0%;
     opacity: 0%;
     transition: 0.3s;
 }
 
-.cat-links{
+.cat-links {
     text-decoration: none;
 }
 
-.visit{
+.visit {
     height: 70vh;
     width: 100%;
 }
 
-.sec{
+.sec {
     height: 50vh;
     min-width: 80vw;
     width: 80vw;
@@ -154,7 +166,7 @@ body{
     background-color: var(--white);
 }
 
-.map{
+.map {
     height: 100%;
     width: 50%;
     border-radius: 30px;
@@ -164,7 +176,7 @@ body{
     align-items: center;
 }
 
-.embed{
+.embed {
     height: 90%;
     width: 90%;
     /* border: 0.1px solid rgba(0, 0, 0, 0.3); */
@@ -175,34 +187,34 @@ body{
     align-items: center
 }
 
-.embed iframe{
+.embed iframe {
     transform: scale(1.1);
 }
 
-.address{
+.address {
     height: 100%;
     width: 50%;
     flex-direction: column;
 }
 
-.address p{
+.address p {
     color: var(--blackl);
 }
 
-.mybtn{
+.mybtn {
     border-radius: 50px;
     width: 150px;
-    background: linear-gradient(to bottom,  var(--branding), rgb(69, 6, 88));
+    background: linear-gradient(to bottom, var(--branding), rgb(69, 6, 88));
     border: none;
     color: var(--black);
 }
 
-.mybtn:hover{
+.mybtn:hover {
     color: var(--black);
     font-weight: bold;
 }
 
-.myfooter{
+.myfooter {
     background-color: var(--footer);
     /* height: 60vh; */
     display: flex;
@@ -211,29 +223,29 @@ body{
     justify-content: center;
 }
 
-.myfooter .container{
+.myfooter .container {
     height: 90%;
 }
 
-.feedback{
+.feedback {
     position: relative;
     height: 50vh;
 }
 
-.your-feedback{
+.your-feedback {
     /* position: absolute; */
-    height:10%;
+    height: 10%;
     width: 200px;
     top: 100px;
     transform: rotate(-90deg);
     color: var(--white);
 }
 
-.feedback .myform{
+.feedback .myform {
     margin-left: -50px;
 }
 
-.feedback .myform input{
+.feedback .myform input {
     margin: 10px 0 10px 0;
     border-radius: 50px;
     border: none;
@@ -242,29 +254,29 @@ body{
     color: var(--black);
 }
 
-.feedback .myform input:hover{
+.feedback .myform input:hover {
     background-color: var(--black);
     color: var(--white);
     border: none;
 }
 
-.feedback .myform input:focus{
+.feedback .myform input:focus {
     outline: none;
 }
 
-.mybutton{
+.mybutton {
     font-weight: bold;
     background-color: var(--branding) !important;
     border: none;
 }
 
-.name-tag{
+.name-tag {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.names{
+.names {
     background-color: var(--branding);
     color: var(--black);
     text-align: center;
@@ -276,20 +288,20 @@ body{
     font-weight: bolder;
 }
 
-.connect .social-links{
+.connect .social-links {
     margin-right: -50px;
     flex-direction: column;
 }
 
-.connect-with-us{
+.connect-with-us {
     margin-right: -80px;
-    height:10%;
+    height: 10%;
     width: 200px;
     top: 100px;
-    transform: rotate(90deg);    
+    transform: rotate(90deg);
 }
 
-.social-links a{
+.social-links a {
     text-decoration: none;
     color: var(--blackl);
     background-color: var(--white);
@@ -301,22 +313,22 @@ body{
     margin: 10px 0 10px 0;
 }
 
-.social-links a:hover{
+.social-links a:hover {
     background-color: var(--black);
 }
 
-.insta:hover{
+.insta:hover {
     color: rgb(255, 0, 191);
 }
 
-.twitter:hover{
+.twitter:hover {
     color: rgb(29, 161, 242);
 }
 
-.fb:hover{
+.fb:hover {
     color: rgb(66, 103, 178);
 }
 
-.youtube:hover{
+.youtube:hover {
     color: red;
 }

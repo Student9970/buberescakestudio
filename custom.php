@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!doctype html> 
 <html lang="en">
   <head> 
@@ -14,19 +20,97 @@
     <!-- Bootstrap CSS -->
     <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link id="maincss" href="./CSS/Style.css" rel="stylesheet" type="text/css" media="screen">
+    <link id="maincss" href="./CSS/style.css" rel="stylesheet" type="text/css" media="screen">
 
-    <link id="products" rel="stylesheet" href="./CSS/products.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="./CSS/custom.css" media="screen" type="text/css">
 
-    <title>Bubere's Cake Studio / Pastries</title>
+    <title>Bubere's Cake Studio / Custom</title>
+
+    <style>
+
+      .back{
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        width: 100vw;
+        z-index: 5000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .popup{
+        height: 40%;
+        width: 60%;
+        background-color: #fff;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .popup img{
+        height: 50%;
+        width: auto;
+      }
+
+      .popup a{
+        text-decoration: none;
+        color: purple;
+      }
+
+    </style>
+
   </head>
   <body onload="anima();">
+
+  <script>
+
+      function closepop(){
+        document.querySelector(".back").remove();
+      }
+
+  </script>
 
 <?php
 include 'loading_animation.php';
 ?>
 
   <script src="./JS/app.js"></script>
+
+<?php
+
+include 'dbcon.php';
+
+if(isset($_POST['submit'])){
+
+  $name = mysqli_real_escape_string($con,  $_POST['name']);
+  $number = mysqli_real_escape_string($con,  $_POST['phone']);
+  $address = mysqli_real_escape_string($con,  $_POST['address']);
+  $type_of_cake = mysqli_real_escape_string($con,  $_POST['option']);
+
+  $query = " insert into custom (name, number, address, option_chosen) values ('$name', '$number', '$address', '$type_of_cake') ";
+
+  mysqli_query($con, $query);
+
+  if($query){
+    ?>
+
+    <div class="back">
+      <div class="popup">
+        <img src="./images/tick.png" alt="Image of a tick">
+        <h4>Your request has been initiated.<br>We will get in touch with you soon</h4>
+        <p><a href="javascript:closepop();">close [x]</a></p>
+      </div>
+    </div>
+
+    <?php
+  }
+
+}
+
+?>
 
 <!-- ============== NAVBAR ============== -->
 
@@ -53,7 +137,7 @@ include 'loading_animation.php';
                 <a class="nav-link" href="about.php">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" onclick="modeChangep();" id = "modeChanger">Dark Mode</a>
+                <a class="nav-link" aria-current="page" href="#" onclick="modeChangec();" id = "modeChanger">Dark Mode</a>
               </li>
             </ul>
             
@@ -64,181 +148,94 @@ include 'loading_animation.php';
             <form id="sform" class="sform" action="SignUp.php">
               <button id="stbn" style="border:none; background: #4285F4; margin-bottom: 5px; color:#fff;" type="submit" class="btn btn-succes mx-md-2 sbtn">Sign Up</button>
             </form>
-            
+
           </div>
         </div>
       </nav>
 
-      <!-- SHOP PASTRIES -->
+      <!-- FORM -->
+<div class="page d-flex justify-content-center align-items-center">
 
-      <div class="shopcakes container d-flex align-items-center justify-content-center">
-        <h3>Shop Pastries</h3>
-        <div class="lined"></div>
-      </div>
+  <form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="POST">
 
-      <!-- Pastries -->
-
-      <div class="container my-5">
+      <div class="container">
 
         <div class="row">
 
-          <div class="col-12">
+            <div class="col-md-4 d-flex justify-content-center align-items-center flex-column formbody imgsection">
 
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/butter_scotch_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Butter Scotch Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 35</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
+              <img id="cakelogo" src="./images/custom1.jpg" alt="cake logo">
+              <div><h2>Custom Cake</h2></div>
 
             </div>
 
-          </div>
+            <div class="col-md-4 d-flex justify-content-center align-items-center flex-column formbody">
 
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/cheese_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Cheese Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 40</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
+            <div class="form-item">
+                
+                <label style="font-weight: bold;" for="name">Full Name</label>
+                <input name="name" class="labels py-1 px-1 my-2" type="text" id="name" placeholder="Name" required>
 
             </div>
 
-          </div>
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/choco_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Chocolate Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 45</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
+              
+            <div class="form-item">
+                
+                <label style="font-weight: bold;" for="phone">Contact number</label>
+                <input name="phone" class="labels py-1 px-1 my-2" type="text" id="phone" placeholder="Number" required>
 
             </div>
 
-          </div>
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/mango_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Mango Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 55</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
+            <div class="form-item">
+                
+                <label style="font-weight: bold;" for="address">Delivery Address</label>
+                <input name="address" class="labels py-1 px-1 my-2" type="text" id="address" placeholder="Address" required>
+              
+            </div>
+              
 
             </div>
 
-          </div>
+            <div class="col-md-4 d-flex justify-content-center align-items-center flex-column formbody">
 
-        </div>
+            <div class="form-item d-flex justify-content-center align-items-center flex-column">
+                
+              <div class="d-flex select my-2">
+                <label class="d-flex flex-start" for="option"><b>Anniversary</b></label>
+                <input name="option" class="frm d-flex flex-end" type="radio" value="Anniversary">
+              </div>
 
-        <div class="row">
+              <div class="d-flex select my-2">
+                <label class="d-flex flex-start" for="option"><b>Kids Birthday</b></label>
+                <input name="option" class="frm d-flex flex-end" type="radio" value="Kids Birthday">
+              </div>
 
-          <div class="col-12">
+              <div class="d-flex select my-2">
+                <label class="d-flex flex-start" for="option"><b>Celebration Cakes</b></label>
+                <input name="option" class="frm d-flex flex-end" type="radio" value="Celebration Cakes">
+              </div>
 
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/strawberry_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Mango Strawberry Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 60</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
+              <div class="d-flex select my-2">
+                <label class="d-flex flex-start" for="option"><b>Photo Cake</b></label>
+                <input name="option" class="frm d-flex flex-end" type="radio" value="Photo Cake">
+              </div>
 
               </div>
 
+            <div style="background-color: red;" class="form-item d-flex justify-content-start">
+                
+                <button type="submit" name="submit" class="btn btn-success mysubbtn">Submit</button>
+              
             </div>
 
-          </div>
-
-          <div class="col-12">
-
-            <div class="thebox container">
-
-              <div class="item d-flex justify-content-center align-items-center row">
-
-                <div class="itemimage col-6">
-                  <img src="./images/Pastries/vanilla_pastry.jpg">
-                </div>
-
-                <div class="col-2"></div>
-
-                <div class="itemdetails col-4">
-                  <h3>Vanilla Pastry</h3>
-                  <p>1 Piece</p>
-                  <h4>&#x20B9; 40</h4>
-                  <a><div class="submitbtn btn btn-success">Buy Now!</div></a>
-                </div>
-
-              </div>
-
             </div>
-
-          </div>
 
         </div>
 
       </div>
+  
+  </form>
+</div>
 
 <!-- Footer -->
 

@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!doctype html> 
 <html lang="en">
   <head> 
@@ -18,7 +24,11 @@
 
     <title>Bubere's Cake Studio</title>
   </head>
-  <body>
+  <body onload="anima();">
+
+    <?php
+    include 'loading_animation.php';
+    ?>
     
     <script src="./JS/app.js"></script>
 
@@ -47,15 +57,52 @@
                 <a class="nav-link" href="about.php">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" onclick="modeChange();" id = "modeChanger">Dark Mode</a>
+                <a class="nav-link" href="javascript:modeChange();" id = "modeChanger">Dark Mode</a>
               </li>
             </ul>
-            <form action="login.php">
-              <button>Log In</button>
+
+            <form id="lform" class="lform" action="login.php">
+              <button id="ltbn" style="border:none; margin-bottom: 5px; background: #BB001B;" type="submit" class="btn btn-success lbtn">Log In</button>
             </form>
+
+            <div>
+              <?php
+              if(isset($_SESSION['username'])){ 
+              ?>
+              <div><strong><?php echo $_SESSION['username'] ?></strong></div>
+            <?php  
+            }  
+              ?>
+            </div>
+            
+            <form id="sform" class="sform" action="SignUp.php">
+              <button id="stbn" style="border:none; background: #4285F4; margin-bottom: 5px; color:#fff;" type="submit" class="btn btn-succes mx-md-2 sbtn">Sign Up</button>
+            </form>
+
           </div>
         </div>
       </nav>
+
+      <?php
+    
+    if(isset($_SESSION['username'])){
+
+      ?>
+    
+      <script>
+          
+          var loginbtn = document.querySelector(".lbtn").style.cssText = "opacity:0;";
+
+          // loginbtn.remove();
+          document.querySelector(".sbtn").innerHTML = "Logout";
+          document.querySelector(".sform").setAttribute("action", "Logout.php");
+
+      </script>
+    
+      <?php
+    }
+
+    ?>
 
     <!-- ============== CAROUSEL ============== -->
 
@@ -64,10 +111,7 @@
           <div class="carousel-item active">
             <img src="./images/Half Chocolate Cake.jpg" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item">
-            <div class="mangocake">
-              <h1>Unwrap Happiness for <br> Every Moment</h1>
-            </div>
+          <div class="carousel-item d-flex justify-content-center align-items-center">
             <img src="./images/Mango Cake.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
@@ -219,7 +263,7 @@
 
           <div class="col-6 col-sm-4 col-md-3 d-flex justify-content-center align-items-center category">
             
-            <a href="#" class="cat-links">
+            <a href="custom.php" class="cat-links">
             <div class="box">
               <div class="img d-flex justify-content-center align-items-center">
                 <div class="image d-flex justify-content-center align-items-center">

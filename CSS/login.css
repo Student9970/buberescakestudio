@@ -1,0 +1,40 @@
+.wdt {
+    width: 100%;
+}
+
+.texts {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.gmail,
+.fb,
+.subbtn {
+    border-radius: 5px;
+    border: none;
+}
+
+.gmail:hover,
+.fb:hover {
+    font-weight: bold;
+}
+
+.gmail {
+    background: #BB001B;
+    color: #fff;
+}
+
+.fb {
+    background: #4267B2;
+    color: #fff;
+}
+
+.or {
+    border-top: ridge;
+    border-bottom: ridge;
+}
+
+.subbtn {
+    background: linear-gradient(rgba(43, 70, 226, 0.1), rgba(43, 70, 226, 0.2));
+}
