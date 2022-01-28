@@ -2,7 +2,7 @@
 
 $password = 'mysql';
 
-$con = mysqli_connect('localhost','root',$password);
+$con = mysqli_connect('localhost', 'root', $password);
 
 mysqli_select_db($con, 'BuberesCakeStudio');
 
@@ -15,6 +15,4 @@ $query = " insert into ContactForm (name, email, query) values ('$sender', '$ema
 
 mysqli_query($con, $query);
 
-header('location:contact.php')
-
-?>
+header('location:contact.php');

@@ -1,0 +1,39 @@
+Note: Install all the Dependencies from the Dependencies folder
+
+Dependencies Required:
+
+1 => VS Code (For clean view of the Code)
+2 => Git (latest version)
+3 => Node Js (Latest version)
+4 => Ampps (v3.3)
+5 => After installing Ampps, set the path for php (Follow the steps below):
+    
+    i => Go to this location C:\Program Files\Ampps\php
+    ii => Copy the path of the folder
+    iii => Press windows key and type "view advanced system settings"
+    iv => Click on "Environment Variables"
+    v => In the "dialog box", click on "path" and click "edit"
+    vi => Click new in the "Edit environment variable" box and paste the path here and click "OK"
+    vii => Note: There are two paths in the "Environment Variables", add the path to user first if php is active then well and good if it's not working then add the path to both paths.
+
+6 => Copying project files:-
+    
+    i => Extract the BCS.zip file
+    ii => Copy the BCS folder extracted
+    iii => Go to this location 'C:\Program Files\Ampps\www'
+    iv => Paste the folder here
+
+7 => Open Ampps and see if MySQL and Apache server has started. If yes then minimize it
+8 => Open your browser and go to 'http://localhost/phpmyadmin/'
+    
+    i => Create a database named 'BuberesCakeStudio'
+    ii => Create 3 tables
+
+	I => CREATE TABLE ContactForm (id int, name varchar(225), email varchar(225), query varchar(225), PRIMARY KEY(id))
+	II => CREATE TABLE registration (id int, username varchar(225), email varchar(225), mobile varchar(225), password varchar(225), cpassword varchar(225), PRIMARY KEY(id))
+	III => CREATE TABLE custom (id int, name varchar(225), number varchar(225), address varchar(225), option_chosen varchar(225), PRIMARY KEY(id))
+
+    iii => Go to this location 'C:\Program Files\Ampps\www'
+    iv => Paste the folder BCS here
+
+9 => Open your browser and go to 'localhost/BCS/index.php'
